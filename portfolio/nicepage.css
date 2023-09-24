@@ -41925,19 +41925,32 @@ a.u-link.u-text-hover-grey-90:hover {
     margin-left: 0;
   }
 }
-
+@media (max-width: 991px) {
+  .u-header .u-menu-1 {
+    width: auto;
+    margin: -40px 13px 48px auto;
+  }
+}
 @media (max-width: 767px) {
   .u-header .u-menu-1 {
-    margin-left: 179px;
+    margin-top: -41px;
+    margin-right: 12px;
+    margin-bottom: 49px;
   }
 }
 @media (max-width: 575px) {
+  .u-header .u-sheet-1 {
+    min-height: 177px;
+  }
+
   .u-header .u-btn-1 {
     margin-top: 110px;
   }
 
   .u-header .u-menu-1 {
-    margin-left: 113px;
+    margin-top: -40px;
+    margin-right: 13px;
+    margin-bottom: 28px;
   }
 }
  .u-footer {
