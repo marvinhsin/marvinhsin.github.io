@@ -1,0 +1,245 @@
+/* Reset some default styles */
+html, body, h1, p {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+.header {
+    background-color: #8a8a8a;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #138202;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    font-family: "Niramit";
+    line-height: 1.5;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Niramit";
+}
+
+/* Banner styles */
+.banner {
+    position: relative;
+    width: 100%;
+    max-height: 500px; 
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    font-family: "Niramit";
+}
+
+.banner-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.thin-banner {
+    background-color: #626060;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Inter";
+}
+
+.menu-title {
+    background-color: none;
+    color: #03722a;
+    padding: 25px;
+    font-weight: bold;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 36px;
+    font-family: "Niramit";
+}
+
+.thin-banner a {
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 5px; 
+}
+
+.skip-line-banner {
+    background-color: #724728;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Inter";
+}
+
+.skip-line-banner a {
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 5px;
+}
+
+.browse-menu {
+    background-color: #724728;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Content styles */
+.content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.item p{
+    text-align: center;
+    color: #626060;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "Inter";
+}
+
+.left-half, .right-half {
+    flex-basis: 48%;
+    align-items: center;
+    padding: 10px;
+}
+
+.opening-title, .opening-content {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.left-half p {
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Niramit';
+}
+
+.right-half p {
+    font-size: 18px;
+    font-family: "Niramit";
+}
+
+.left-container {
+    text-align: center;
+}
+
+.order-online {
+    background-color: #724728;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.row {
+    display: inline-block;
+}
+
+.dish {
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dish img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.load {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a7a9a7;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Niramit";
+    padding: 30px;
+}
+.load-div {
+    text-align: center;
+}
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    padding: 20px;
+    font-size: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-address {
+    margin-right: 20px; 
+    text-align: center;
+}
+
+
+.address {
+    line-height: 1.2;
+}
+
