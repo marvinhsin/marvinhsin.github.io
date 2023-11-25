@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    height: 100vh; /* Set the height of each section to the viewport height */
+    height: 100vh; 
     position: relative;
     align-items: center;
     justify-content: center;
