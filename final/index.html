@@ -1,6 +1,47 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        FINAL
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap">
+    <title>Christmas Page</title>
+</head>
+<body>
+    <div id="section1" class="container">
+        <div id="startAnimation"><a class="button">Merry Christmas</a></div>
+        <div id="snowfall"></div>
+        <div class="scroll-down-button" onclick="scrollToNextSection()">
+            <img src="assets/img/scrolldown.png" alt="Scroll Down">
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <div id="section2" class="container">
+        <div class="top-section grid">
+            <h2>Trivia: Home of Santa Claus is in Finland!</h2>
+        </div>
+        <div class="middle-section grid">
+            <div id="prev-button" class="swipe-button" onclick="scrollToNextSection()">
+                <img src="assets/img/swipeleft.png" alt="Swipe Left">
+            </div>
+            <div class="image-slider">
+                <img src="assets/img/rovaniemi.jpeg" alt="Image 1">
+                <img src="assets/img/finland1.jpeg" alt="Image 2">
+                <img src="assets/img/finland4.jpeg" alt="Image 5">
+                <img src="assets/img/finland5.jpeg" alt="Image 6">
+                <img src="assets/img/finland6.jpeg" alt="Image 7">
+                <img src="assets/img/finland7.jpeg" alt="Image 8">
+            </div>
+            <div id="next-button" class="swipe-button" onclick="scrollToNextSection()">
+                <img src="assets/img/swiperight.png" alt="Swipe Right">
+            </div>
+        </div>
+        <div class="bottom-section grid">
+            <h2>Rovaniemi, Finland</h2>
+        </div>
+        <div id="snowfall"></div>
+    </div>
+</body>
 </html>

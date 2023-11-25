@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #c60c0c;
+}
+
+.container {
+    height: 100vh; /* Set the height of each section to the viewport height */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: font-size 0.3s;
+}
+
+.button:hover {
+    font-size: 65px;
+}
+
+#snowfall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+.snowflake {
+    position: absolute;
+    background-image: url('assets/img/snow.png');
+    background-size: cover;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.scroll-down-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+
+}
+
+.scroll-down-button img {
+    width: 55px;
+    height: 50px;
+}
+  
+  
+#section2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+  
+.grid {
+    margin: 25px 0;
+}
+  
+.top-section {
+    flex: 1;
+}
+  
+.middle-section {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bottom-section {
+    flex: 3;
+}
+
+h2 {
+    font-size: 50px;
+    color: #fff;
+    font-family: 'Amatic SC', cursive;
+}
+
+.image-slider {
+    width: 80%; 
+    margin: 20px auto; 
+}
+
+.image-slider img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.swipe-button img{
+    width: 90px; 
+    height: auto;
+}
+
+.swipe-button {
+    transition: font-size 0.3s;
+}
+
+.swipe-button:hover {
+    font-size: 95px;
+}
