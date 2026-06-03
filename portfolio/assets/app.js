@@ -17,6 +17,9 @@ const assets = {
   pintosUserPrograms: "assets/files/Project_User_Programs_Design.pdf",
 };
 
+const leetcodeUsername = "bdfb1997";
+const leetcodeCardUrl = `https://leetcard.jacoblin.cool/${leetcodeUsername}?theme=dark&ext=heatmap&hide=ranking&width=500&height=320`;
+
 const profileLinks = [
   ["LinkedIn", "https://www.linkedin.com/in/cheng-ying-hsin/", "View LinkedIn profile", assets.linkedinIcon],
   ["GitHub", "https://github.com/marvinhsin?tab=repositories", "View GitHub repositories", assets.githubIcon],
@@ -361,9 +364,23 @@ function Hero() {
       ),
       h(
         "div",
-        { className: "profile-summary-grid" },
-        h(SummaryBlock, { label: "Years of Experience", value: [h("span", { className: "tech-highlight", key: "years" }, "2+ years"), " across Apple Calendar backend services, RemoteNC full-stack product engineering, and financial trading systems."] }),
-        h(SummaryBlock, { label: "Tech Stack", value: "Java Spring Boot, Python Django, React, TypeScript, Kafka, Docker, Kubernetes, AWS, PostgreSQL, Oracle DB, and Redis." })
+        { className: "hero-highlights" },
+        h(
+          "div",
+          { className: "profile-summary-stack" },
+          h(SummaryBlock, {
+            label: "Years of Experience",
+            value: [
+              h("span", { className: "tech-highlight", key: "years" }, "2+ years"),
+              " across Apple Calendar backend services, RemoteNC full-stack product engineering, and financial trading systems.",
+            ],
+          }),
+          h(SummaryBlock, {
+            label: "Tech Stack",
+            value: "Java Spring Boot, Python Django, React, TypeScript, Kafka, Docker, Kubernetes, AWS, PostgreSQL, Oracle DB, and Redis.",
+          })
+        ),
+        h("div", { className: "profile-summary-side" }, h(LeetCodePanel))
       )
     )
   );
@@ -380,7 +397,7 @@ function ProfileCard() {
     ),
     h("p", { className: "profile-kicker" }, "Cheng-Ying Hsin"),
     h("h1", null, "Marvin Hsin"),
-    h("p", { className: "subtitle" }, "Software Engineer @ ex-Apple"),
+    h("p", { className: "subtitle" }, "Software Engineer | ex-Apple"),
     h("p", { className: "profile-email" }, "bdfb1997(at)berkeley.edu"),
     h(
       "dl",
@@ -477,6 +494,27 @@ function About() {
           h(SkillsBlock),
           h(InfoBlock, { title: "Certification", items: ["AWS Certified Cloud Practitioner"] })
         )
+      )
+    )
+  );
+}
+
+function LeetCodePanel() {
+  return h(
+    "div",
+    { className: "leetcode-section", id: "leetcode" },
+    h(
+      "div",
+      { className: "leetcode-panel" },
+      h(
+        "a",
+        { className: "leetcode-card-link", href: `https://leetcode.com/u/${leetcodeUsername}/`, target: "_blank", rel: "noreferrer" },
+        h("img", {
+          className: "leetcode-card",
+          src: leetcodeCardUrl,
+          alt: `LeetCode stats card for ${leetcodeUsername}`,
+          loading: "lazy",
+        })
       )
     )
   );

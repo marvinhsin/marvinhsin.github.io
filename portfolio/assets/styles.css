@@ -211,7 +211,7 @@ nav a:hover,
 
 .hero {
   display: flex;
-  min-height: calc(100vh - 144px);
+  min-height: auto;
   padding-top: 0;
 }
 
@@ -365,7 +365,42 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 840px;
+  width: 100%;
+  max-width: none;
+}
+
+.hero-highlights {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: 18px;
+  align-items: start;
+  margin-top: 30px;
+  min-height: 0;
+}
+
+.profile-summary-stack {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.profile-summary-stack .summary-block {
+  min-height: auto;
+}
+
+.profile-summary-side {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.profile-summary-side .leetcode-section {
+  padding-top: 0;
+  width: 100%;
+}
+
+.profile-summary-side .leetcode-panel {
+  align-self: center;
 }
 
 .eyebrow {
@@ -442,8 +477,8 @@ h3 {
 }
 
 .summary-block {
-  min-height: 164px;
-  padding: 22px;
+  min-height: 120px;
+  padding: 14px 22px 10px;
   border-radius: 8px;
   box-shadow: none;
 }
@@ -463,8 +498,51 @@ h3 {
   padding-top: 36px;
 }
 
+#leetcode,
 #profile-details {
   scroll-margin-top: 76px;
+}
+
+.leetcode-section {
+  padding-top: 0;
+}
+
+.leetcode-panel {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(86, 198, 181, 0.12), rgba(240, 163, 94, 0.06)), var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.leetcode-panel::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  content: "";
+}
+
+.leetcode-card-link {
+  display: block;
+  align-self: start;
+  width: 100%;
+  height: 100%;
+}
+
+.leetcode-card {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 1px solid rgba(39, 56, 63, 0.92);
+  border-radius: 10px;
+  background: #0b1114;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
 }
 
 .profile-detail-layout {
@@ -786,6 +864,8 @@ li + li {
   .hero,
   .two-column,
   .profile-detail-layout,
+  .hero-highlights,
+  .leetcode-panel,
   .project-card,
   .course-row {
     grid-template-columns: 1fr;
@@ -799,6 +879,10 @@ li + li {
     justify-content: flex-start;
   }
 
+  .hero-highlights {
+    margin-top: 22px;
+  }
+
   .course-row {
     gap: 8px;
   }
@@ -810,6 +894,10 @@ li + li {
   .profile-narrative {
     justify-content: flex-start;
     padding-right: 0;
+  }
+
+  .profile-summary-side .leetcode-section {
+    padding-top: 0;
   }
 
   .experience-list {
